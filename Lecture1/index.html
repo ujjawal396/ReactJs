@@ -6,17 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div id="div"> 
+    <div id="root"> 
     
 
-    </div> -->
+    </div>
     
-    <script>
-        const ele=document.createElement("h1");
-        ele.innerHTML="Hello world 2"
-        // const parent=document.getElementById("div");
-        document.body.appendChild(ele);
-        
-    </script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    const ele=React.createElement("h1",{},"Hello world from react");
+    const root=ReactDOM.createRoot(document.getElementById("root"));
+    root.render(ele);
+</script>
 </body>
 </html>
