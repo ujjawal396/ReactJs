@@ -1,0 +1,17 @@
+{
+  "name": "lecture2",
+  "version": "1.0.0",
+  "description": "bundler react tool learning",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ujjawal Jha",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
