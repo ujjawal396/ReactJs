@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "bundler react tool learning",
   "scripts": {
+    "start": "npx parcel index.html",
     "test": "jest"
   },
   "author": "Ujjawal Jha",
