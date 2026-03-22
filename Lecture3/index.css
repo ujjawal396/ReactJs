@@ -1,14 +1,12 @@
-.header{
-    display:flex;
+.header {
+    display: flex;
     justify-content: space-between;
     border: 1px solid black
-
 }
 
-.logo{
-    width:200px;
+.logo {
+    width: 200px;
 }
-
 
 .nav-items {
     padding:  0px 20px;
@@ -19,18 +17,10 @@
     display: flex;
     list-style-type: none;
 }
+
 .nav-items > ul > li {
     padding: 10px;
     margin: 10px
-}
-
-.res-card {
-    margin: 5px;
-    padding: 5px;
-    width: 200px;
-}
-.search {
-    padding: 10px
 }
 
 .res-container {
@@ -49,6 +39,9 @@
     border: 1px solid black;
 }
 
+.search {
+    padding: 10px
+}
 
 .res-logo {
     width: 100%;
