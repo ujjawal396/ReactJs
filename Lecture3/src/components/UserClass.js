@@ -2,41 +2,55 @@ import { Component } from "react";
 
 
 class UserClass extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
-        this.state={
-            count:0,
+       this.state = {
+      userInfo: {
+        name: "Dummy",
+        location: "Delhi",
+      },
+    };
+    console.log(this.props.name + "Child Constructor");
+  }
 
+  async componentDidMount() {
+    //console.log(this.props.name + "Child Component Did Mount");
+    // Api call
 
+    const data = await fetch("https://api.github.com/users/ujjawal396");
+    //https://api.github.com/users/akshaymarch7
+    const json = await data.json();
 
-        }
+    this.setState({
+      userInfo: json,
+    });
 
-        
-    }
+    console.log(json);
+  }
 
-    render() {
-        const {count}=this.state;
-            return (
+   componentDidUpdate() {
+    console.log("Component Did Update");
+  }
 
-     <div className="user-card">
-      <h1>Count :{count}</h1>
-      <button onClick={()=>{
-        this.setState(
-            {
-            count:this.state.count+1
-        }
-        );
-      }}>click</button>
-      <h1>Count2 </h1>
-      <h2>Name</h2>
-      <h3>Location: Dehradun</h3>
-      <h4>Contact: @akshaymarch7</h4>
-    </div> 
-                
-     );
+  componentWillUnmount() {
+    console.log("Component Will Unmount");
+  }
 
-        };
+     render() {
+    console.log(this.props.name + "Child Render");
+
+    const { name, location, avatar_url } = this.state.userInfo;
+   
+    return (
+      <div className="user-card">
+        <img src={avatar_url} />
+        <h2>Name: {name}</h2>
+        <h3>Location: {location}</h3>
+        <h4>Contact: Ujjawal</h4>
+      </div>
+    );
+  }
 }
 
 export default UserClass;
